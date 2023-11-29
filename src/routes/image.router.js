@@ -1,15 +1,14 @@
-const { getAll, create, getOne, remove, update } = require('../controllers/image.controller');
+const { getAll, create, remove } = require('../controllers/image.controller');
 const express = require('express');
 
 const imageRouter = express.Router();
 
 imageRouter.route('/')
     .get(getAll)
-    .post(create);
+    .post( create);
 
 imageRouter.route('/:id')
-    .get(getOne)
-    .delete(remove)
-    .put(update);
+    .delete(remove);
+
 
 module.exports = imageRouter;

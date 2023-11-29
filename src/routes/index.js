@@ -17,6 +17,7 @@ router.use('/products',productsRouter)
 router.use('/image', imageRouter)
 
 router.use('/cart', categoryRouter)
-router.use('/purchase', purchaseRouter)
+
+router.use('/purchases', purchaseRouter)
 
 module.exports = router;
